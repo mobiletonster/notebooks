@@ -56,3 +56,17 @@ And finally, in Powershell
 for($i = 0; $i -lt 10; $i++){ 
     "{0:N2} at {1}" -f ($i/4.2), (get-date).Ticks
 }
+
+#!pwsh
+
+<# Install-Module PowershellNotebook #>
+
+<# Get-Command -Module PowerShellNotebook | 
+    Select-Object -ExpandProperty Name | 
+    Foreach-Object { 
+        Get-Help $_ | Select-Object Name, { $_.Synopsis.Trim() }
+    } #>
+
+    <#
+ConvertFrom-NotebookToMarkdown -NotebookName /Users/tonyspencer/repos/notebooks/notebooks/csharp_fsharp.ipynb
+#>

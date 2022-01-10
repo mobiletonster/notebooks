@@ -51,6 +51,8 @@ for($i = 0; $i -lt 10; $i++){
         Get-Help $_ | Select-Object Name, { $_.Synopsis.Trim() }
     } #>
 
-ConvertFrom-NotebookToMarkdown -NotebookName /Users/tonyspencer/repos/notebooks/notebooks/csharp_fsharp.dib
+    <#
+ConvertFrom-NotebookToMarkdown -NotebookName /Users/tonyspencer/repos/notebooks/notebooks/csharp_fsharp.ipynb
+#>
 ```
 
