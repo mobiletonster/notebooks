@@ -8,8 +8,8 @@ for(double i=0;i<10;i++){
 
 This next method (F#) attempts to duplicate the same code as the C# example above.
 ```C#
-for i = 0 to 9 do  
-      printfn $"{((i:float)/4.2):N2} at {DateTime.Now.Ticks}"
+for i in [0.0..9.0] do  
+      printfn $"{(i/4.2):N2} at {DateTime.Now.Ticks}"
 ```
 
 The almost equivalent code in Javascript. Ticks aren't quite ticks as far as I can tell as they seem to be a different number.
@@ -40,6 +40,19 @@ And finally, in Powershell
 for($i = 0; $i -lt 10; $i++){ 
     "{0:N2} at {1}" -f ($i/4.2), (get-date).Ticks
 }
+```
+
+```C#
+#r "nuget:Microsoft.DotNet.Interactive.SqlServer,*-*"
+
+#!connect mssql --kernel-name mydatabase "Persist Security Info=False; Integrated Security=true; Initial Catalog=MyDatabase; Server=localhost"
+    
+
+```
+
+```C#
+
+select getdate()
 ```
 
 ```C#
